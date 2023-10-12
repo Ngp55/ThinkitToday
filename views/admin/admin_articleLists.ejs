@@ -1,0 +1,42 @@
+<head>
+</head>
+<body>
+    
+  <div class="container-fluid py-4">
+    <div class="row">
+          <h1>Post List</h1>      
+          <div class="container mt-5">
+              <div class="row">
+                  <div class="col-md-1"><strong>Sl.No</strong></div>
+                  <div class="col-md-3"><strong>Post Name</strong></div>
+                  <div class="col-md-3"><strong>Category</strong></div>
+                  <div class="col-md-2"><strong>User Name</strong></div>
+                  <div class="col-md-3"><strong>Update</strong></div>
+              </div>
+          
+              <!-- Replace this with your dynamic data -->
+              <div class="row data-row">
+                  <% let counter = 1; %>
+                  <% articles.forEach(article => { %>
+                      <div class="col-md-1"><%= counter %></div>
+                      <div class="col-md-3"><%= article.txtinput %></div>
+                      <div class="col-md-3"><%= article.catnames %></div>
+                      <div class="col-md-2"><%= article.user %></div>
+                      <div class="col-md-3" style="display: none;">
+                          <a href="/admin/delete-user/<%= article._id %>" style="color: crimson; font-weight: 500;"> Update</a>
+                      </div>
+                      <% counter++; %>
+                  <% }); %>
+              </div>
+          
+              <!-- Add more rows as needed -->
+          </div>
+          
+      </div>
+
+  </div>      
+
+                  
+</body>
+    
+

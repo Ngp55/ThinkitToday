@@ -1,0 +1,30 @@
+<!-- views/index.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Form Example</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <h1>Form Example</h1>
+  <form action="/users/save-form" method="POST">
+    <label for="textField1">Text Field 1:</label>
+    <input type="text" id="textField1" name="textField1" required>
+    <br>
+    <label for="textField2">Text Field 2:</label>
+    <input type="text" id="textField2" name="textField2" required>
+    <br>
+    <label for="checkbox1">Checkbox 1:</label>
+    <input type="checkbox" id="checkbox1" name="checkbox1">
+    <br>
+    <label for="checkbox2">Checkbox 2:</label>
+    <input type="checkbox" id="checkbox2" name="checkbox2">
+    <br>
+    <label for="textarea">Textarea:</label>
+    <textarea id="textarea" name="textarea" rows="4" cols="50" required></textarea>
+    <br>
+    <input type="submit" value="Submit">
+  </form>
+</body>
+</html>

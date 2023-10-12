@@ -1,0 +1,13 @@
+<link rel="stylesheet" href="/css/signup.css">
+
+<div class="main-container">
+    <form action="/users/create" method="post">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your email" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <input type="password" name="confirm_password" placeholder="Confirm_password" required>
+        <input type="hidden" name="isAdmin" value="false">
+        <input type="submit" value="Sign Up">
+    
+    </form>
+</div>

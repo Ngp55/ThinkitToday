@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .btn-publish, .btn-unpublish {
+            padding: 5px 10px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-unpublish {
+            background-color: #f44336;
+        }
+    </style>
+</head>
+<body>
+    <h1>Article List</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Article Number</th>
+                <th>Article Title</th>
+                <th>Writing Date</th>
+                <th>Created By User</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Sample Article 1</td>
+                <td>2023-09-24</td>
+                <td>User A</td>
+                <td>
+                    <button class="btn-publish">Publish</button>
+                    <button class="btn-unpublish">Unpublish</button>
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Sample Article 2</td>
+                <td>2023-09-25</td>
+                <td>User B</td>
+                <td>
+                    <button class="btn-publish">Publish</button>
+                    <button class="btn-unpublish">Unpublish</button>
+                </td>
+            </tr>
+            <!-- Add more article rows here -->
+        </tbody>
+    </table>
+</body>
+</html>

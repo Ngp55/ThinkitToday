@@ -1,0 +1,85 @@
+
+
+    <head>
+  
+  
+      <link rel="stylesheet" type="text/css" href="/css/addpost.css">
+      <script src="/js/tinymce/tinymce.min.js" referrerpolicy="origin"></script>
+        <script>
+          tinymce.init({
+            selector: '#textarea',
+            plugins:[
+            'advlist', 'autolink', 'link', 'image', 'lists', 'charmap', 'prewiew', 'anchor', 'pagebreak',
+            'searchreplace', 'wordcount', 'visualblocks', 'code', 'fullscreen', 'insertdatetime', 'media', 
+            'table', 'emoticons', 'template', 'codesample'
+        ],
+        toolbar: 'undo redo | styles | bold italic underline | alignleft aligncenter alignright alignjustify |' + 
+        'bullist numlist outdent indent | link image | print preview media fullscreen | ' +
+        'forecolor backcolor emoticons ',
+        menu: {
+            favs: {title: 'menu', items: 'code visualaid | searchreplace | emoticons'}
+        },
+        menubar: 'favs file edit view insert format tools table',
+        content_style: 'body{font-family:Helvetica,Arial,sans-serif; font-size:16px}',
+        // autosave_interval: '20s'
+        // 'autosave'
+        // + 'restoredraft'
+          });
+        </script>
+    </head>
+    <body>
+     
+      <div class="container-fluid py-4">
+        <div class="row">
+          <div class="container">
+            <h2>Add Post</h2>
+            <form method="POST" action="/admin/save-article" novalidate>
+              <div class="form-group">
+                  <label for="txtinput">Article Title *</label>
+                  <input type="text" id="txtinput" name="txtinput" placeholder="Enter the title" required>
+              </div>
+              <div class="form-group" style="display: none;">
+                <label for="txtinput">Image *</label>
+                <input type="file" name="photos">
+            </div>
+              <div class="form-group">
+                  <label for="datetimeinput">Publication Date & Time  *</label>
+                  <input type="datetime-local" id="datetimeinput" name="datetimeinput" required>
+              </div>
+              <div class="form-group">
+                  <label for="catnames">Category  *</label>
+                  <select id="catnames" name="catnames" required>
+                      <option value="polity">Polity</option>
+                      <option value="crime">Crime</option>
+                      <option value="farming">Farming</option>
+                      <option value="market">Market</option>
+                      <option value="game">Game</option>
+                      <option value="culture">Culture</option>
+                      <option value="entertainment">Entertainment</option>
+                  </select>
+              </div>
+                <input type="hidden" name="published" value="false" >
+              
+              <div class="form-group">
+                  <label for="textarea">Article Content  *</label>
+                  <textarea id="textarea" name="textarea" placeholder="Write your article here" rows="20" colrequired></textarea>
+              </div>
+              <div class="form-group">
+                  <a><button type="button" class="button_eff">Previous Article</button></a>
+                  <button type="submit" class="button_eff sav">Save</button>
+                  <a ><button type="button" class="button_eff del">Delete</button></a>
+                  <a><button type="button" class="button_eff">New Article</button></a>
+              </div>
+          </form>
+      
+        </div>  
+    
+        </div>
+        
+      </div>
+    
+      
+      
+     
+    </body>
+    
